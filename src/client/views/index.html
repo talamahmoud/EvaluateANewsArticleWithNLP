@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>News NLP Analysis Tool</title>
+        <link rel="stylesheet" href="styles/main.css"> <!-- Assuming you have a main.css file for styling -->
+      </head>
+
+      <body>
+        <header>
+          <h1>News NLP Analysis Tool</h1>
+        </header>
+        <div class="sl-c-pop-stripe"></div>
+        <main>
+          <section>
+            <form id="url-form" method="post">
+              <label for="url-input">Analyze a News Article URL:</label>
+              <input id="url-input" type="text" name="url" placeholder="Paste the URL here" required>
+              <div class="feedback-wrapper"></div>
+              <button id="submit-button" type="submit">Analyze Now</button>
+              <div class="loader" style="visibility:hidden;">Loading...</div>
+              <div class="error-wrapper" style="display:none;"></div>
+            </form>
+          </section>
+          <section>
+            <p class="result"><strong>Analysis Results:</strong></p>
+            <div id="results"></div>
+          </section>
+        </main>
+        <footer>
+          <p>&copy; <span id="current-year"></span> Tala Ismail</p>
+        </footer>
+        <script src="bundle.js"></script> <!-- Assuming you bundle your JS files -->
+        <script>
+          document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+      </body>
+</html>
